@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Dobble - Start the game</title>
+		<link type="text/css" rel="stylesheet" media="screen" href="styles.css">
+	</head>
+	<body>
+		<div class="body-wrapper">
+			<form method="post" action="/game">
+				<input id="playerName" type="text" name="playerName">
+				<input value="Ok" type="submit">
+			</form>
+		</div>
+	
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	</body>
+</html>

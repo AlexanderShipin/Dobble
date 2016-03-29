@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Dobble - Start the game</title>
+    <link type="text/css" rel="stylesheet" media="screen" href="styles.css">
+  </head>
+  <body>
+	<div class="body-wrapper">
+		<div id="playground">
+			<div id="current-common-card">Current common card</div>
+			<div id="current-player-card">Current player card</div>
+		</div>
+		<div id="players">
+			<div class="player-list-title">Users</div>
+			<div id="player-list"></div>
+			<div class="start">Start</div>
+		</div>
+	</div>
+	
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<script>
+		var socket = io();
+		$('.start').click(function () {
+			socket.emit('start', '');
+		});
+		socket.on('new player', function (msg) {
+			$('#player-list').append($('<div class="player">').text(msg));
+		});
+	</script>
+  </body>
+</html>
