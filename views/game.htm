@@ -13,7 +13,7 @@
 		<div id="players">
 			<div class="player-list-title">Users</div>
 			<div id="player-list"></div>
-			<div class="start">Start</div>
+			<div id="start">Start</div>
 		</div>
 	</div>
 	
@@ -21,11 +21,14 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 	<script>
 		var socket = io();
-		$('.start').click(function () {
-			socket.emit('start', '');
+		$('#start').click(function () {
+			socket.emit('readyToStart', '');
 		});
-		socket.on('new player', function (msg) {
+		socket.on('newPlayer', function (msg) {
 			$('#player-list').append($('<div class="player">').text(msg));
+		});
+		socket.on('start', function (deck) {
+			$('#current-player-card').text(deck);
 		});
 	</script>
   </body>
