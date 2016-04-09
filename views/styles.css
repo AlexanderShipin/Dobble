@@ -29,3 +29,11 @@ body {
 .player {
 	padding: 4px 0 4px 12px;
 }
+
+#current-common-card {
+	float: left;
+}
+
+#current-player-card {
+	float: right;
+}

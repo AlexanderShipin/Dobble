@@ -7,8 +7,12 @@
   <body>
 	<div class="body-wrapper">
 		<div id="playground">
-			<div id="current-common-card">Current common card</div>
-			<div id="current-player-card">Current player card</div>
+			<div id="current-common-card">
+				<img src="img/back.jpg"/>
+			</div>
+			<div id="current-player-card">
+				<img src="img/back.jpg"/>
+			</div>
 		</div>
 		<div id="players">
 			<div class="player-list-title">Users</div>
@@ -27,8 +31,12 @@
 		socket.on('newPlayer', function (msg) {
 			$('#player-list').append($('<div class="player">').text(msg));
 		});
-		socket.on('start', function (deck) {
-			$('#current-player-card').text(deck);
+		socket.on('changeCards', function (commonCard, playerCard) {
+			$('#current-common-card img').attr("src", "img/" + commonCard + ".jpg");//todo: pics to background
+			$('#current-player-card img').attr("src", "img/" + playerCard + ".jpg");
+		});
+		$('#current-player-card').click(function () {
+			socket.emit('selectPict', '');
 		});
 	</script>
   </body>

@@ -16,18 +16,26 @@ app.use(express.static(__dirname + viewsFolder));
 
 var playerName = "";
 
-var deck = [];
-function fillDeck(){
+var deck = [];//todo: avoid globals
+var firstCard;
+var currentPlayerCard;
+function fillDeck(players){//todo: players
 	var n = 55;
 	var indexesTmp = [];
 	for(var i = 0; i < n; i++){
 		indexesTmp[i] = i;
 	}
-	for(var i = 0; i < n; i++){
-		var randomCard = Math.floor(Math.random() * indexesTmp.length);
-		deck.push(indexesTmp.splice(randomCard, 1)[0]);
+	firstCard = getRandromCard(indexesTmp);
+	var cardsForPlayers = indexesTmp.length;
+	for(var i = 0; i < cardsForPlayers; i++){
+		deck.push(getRandromCard(indexesTmp));
 	}
 };
+
+function getRandromCard(indexes){
+	var randomCard = Math.floor(Math.random() * indexes.length);
+	return indexes.splice(randomCard, 1)[0];
+}
 
 io.on('connection', function (socket) {
 	io.emit('newPlayer', playerName);
@@ -42,13 +50,21 @@ io.on('connection', function (socket) {
 	});
 
 	socket.on('selectPict', function () {
-		console.log('selectPict');
+		var playerCard = currentPlayerCard;
+		
+		if(deck.length > 0)
+			currentPlayerCard = deck.splice(0, 1)[0];//todo: empty card when done
+			
+		io.emit('changeCards', playerCard, "back");//todo: empty card when done
 	});
 
 	socket.on('readyToStart', function () {
 		deck = [];
-		fillDeck();
-		io.emit('start', deck);
+		var players = 1;
+		fillDeck(players);
+		
+		currentPlayerCard = deck.splice(0, 1)[0];
+		io.emit('changeCards', firstCard, currentPlayerCard);
 		console.log('readyToStart');
 	});
 });
