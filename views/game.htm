@@ -28,16 +28,37 @@
 		$('#start').click(function () {
 			socket.emit('readyToStart', '');
 		});
-		socket.on('newPlayer', function (msg) {
-			$('#player-list').append($('<div class="player">').text(msg));
+		socket.on('playerConnected', function (player) {
+			playerFormatter(player);
+		});
+		socket.on('playerDisconnected', function (playerId) {
+			$('#' + playerId).remove();
 		});
 		socket.on('changeCards', function (commonCard, playerCard) {
 			$('#current-common-card img').attr("src", "img/" + commonCard + ".jpg");//todo: pics to background
 			$('#current-player-card img').attr("src", "img/" + playerCard + ".jpg");
 		});
+		
 		$('#current-player-card').click(function () {
 			socket.emit('selectPict', '');
 		});
+		$(document).ready(function(){
+			$.ajax({
+				url: "/players",
+				success: function(playersJson){
+					var players = $.parseJSON(playersJson);
+					$.each(players, function(index, player) {
+						playerFormatter(player);
+					});
+				},
+				error: function(){}
+			});
+			//socket.emit('pageReady', '');
+		});
+		
+		function playerFormatter(player){
+			$('#player-list').append($('<div class="player" id="' + player.id + '">').text(player.name));
+		};
 	</script>
   </body>
 </html>

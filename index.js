@@ -19,6 +19,7 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + config.viewsFolder));
 
 router.get('/', requestHandlers.index);
+router.get('/players', requestHandlers.players);
 router.post('/game', requestHandlers.game);
 app.use('', router);
 
