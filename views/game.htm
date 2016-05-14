@@ -21,7 +21,7 @@
 			</div>
 		</div>
 		<div id="players">
-			<div class="player-list-title">Users</div>
+			<div class="player-list-title">Players</div>
 			<div id="player-list"></div>
 			<div id="start">Start</div>
 		</div>
@@ -33,16 +33,6 @@
 		var socket = io();
 		$('#start').click(function () {
 			socket.emit('readyToStart', '');
-		});
-		socket.on('playerConnected', function (player) {
-			playerFormatter(player);
-		});
-		socket.on('playerDisconnected', function (playerId) {
-			$('#' + playerId).remove();
-		});
-		socket.on('changeCards', function (commonCard, playerCard) {
-			$('#current-common-card img').attr("src", "img/" + commonCard + ".jpg");//todo: pics to background
-			$('#current-player-card img').attr("src", "img/" + playerCard + ".jpg");
 		});
 		
 		$('#current-player-card').click(function () {
@@ -59,7 +49,6 @@
 				},
 				error: function(){}
 			});
-			//socket.emit('pageReady', '');
 		});
 		
 		$("#ok-button").click(function(){
@@ -70,6 +59,19 @@
 		function playerFormatter(player){
 			$('#player-list').append($('<div class="player" id="' + player.id + '">').text(player.name));
 		};
+		
+		socket.on('playerConnected', function (player) {
+			playerFormatter(player);
+		});
+		
+		socket.on('playerDisconnected', function (playerId) {
+			$('#' + playerId).remove();
+		});
+		
+		socket.on('changeCards', function (commonCard, playerCardMarkup) {
+			$('#current-common-card img').attr("src", "img/" + commonCard + ".jpg");//todo: pics to background
+			$('#current-player-card').empty().append(playerCardMarkup);//attr("src", "img/" + playerCard + ".jpg");
+		});
 	</script>
   </body>
 </html>

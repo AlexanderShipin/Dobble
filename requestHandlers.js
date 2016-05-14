@@ -6,14 +6,8 @@ module.exports = function (io, config) {
 	io.on('connection', socketHandlers.connection);
 
 	module.index = function (req, res) {
-		//var playerName = req.body.playerName;//
 		res.sendFile(path.join(__dirname, config.viewsFolder, 'game.htm'));
 	};
-	
-	/*module.game = function (req, res) {
-		var playerName = req.body.playerName;
-		res.sendFile(path.join(__dirname, config.viewsFolder, 'game.htm'));
-	};*/
 	
 	module.players = function (req, res) {
 		res.send(JSON.stringify(socketHandlers.players));
