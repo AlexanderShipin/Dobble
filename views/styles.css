@@ -11,9 +11,9 @@ body {
 	z-index: 1;
 }
 
-.name-input {
-	width: 300px;
-	height: 300px;
+.start-panel {
+	width: 268px;
+	height: 125px;
     position: absolute;
     top:0;
     bottom: 0;
@@ -21,6 +21,27 @@ body {
     right: 0;
 	margin: auto;
 	background-color: #fff;
+	padding: 16px;
+	border: 5px solid #9966cc;
+	border-radius: 10px;
+}
+
+.start-panel-line {
+	text-align: center;
+	margin-bottom: 16px;
+}
+
+.start-panel-line input {
+	font-size: 16pt;
+	width: 263px;
+}
+
+.start-panel-line #ok-button {
+	font-size: 16pt;
+	width: 267px;
+	padding: 3px 0;
+	background-color: #f4cb02;
+	display: block;
 }
 
 #playground {
