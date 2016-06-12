@@ -45,7 +45,14 @@ body {
 }
 
 #playground {
-	float: left;
+	width: 980px;
+	height: 679px;	
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	margin: auto;
 }
 
 #players {
@@ -71,10 +78,24 @@ body {
 	padding: 4px 0 4px 12px;
 }
 
+#current-common-card  img {
+	width: 460px;
+	height: 658px;
+	border: 10px solid #f4cb02;
+	border-radius: 40px;
+}
+
 #current-common-card {
 	float: left;
 }
 
 #current-player-card {
 	float: right;
+}
+
+#current-player-card img {
+	width: 460px;
+	height: 658px;
+	border: 10px solid #f4cb02;
+	border-radius: 40px;
 }
