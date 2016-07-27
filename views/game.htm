@@ -7,18 +7,23 @@
   <body>
 	<div class="body-wrapper">
 		<div class="overlay">
-			<div class="start-panel">
-				<div class="start-panel-line">
+			<div class="join-panel">
+				<div class="join-panel-line">
 					<input id="player-name" type="text" name="player-name" placeholder="Name">
 				</div>
-				<div class="start-panel-line">
+				<div class="join-panel-line">
 					<input id="game-to-join" type="text" name="game-to-join" placeholder="Game code to join">
 				</div>
-				<div class="start-panel-line">
+				<div class="join-panel-line">
 					<span id="ok-button">OK</span>
 				</div>
 			</div>
 		</div>
+		<div id="players">
+			<div class="player-list-title">Players</div>
+			<div id="player-list"></div>
+		</div>
+		<div id="start">Start</div>
 		<div id="playground">
 			<div id="current-common-card">
 				<img src="img/back.jpg"/>
@@ -26,11 +31,6 @@
 			<div id="current-player-card">
 				<img src="img/back.jpg"/>
 			</div>
-		</div>
-		<div id="players">
-			<div class="player-list-title">Players</div>
-			<div id="player-list"></div>
-			<div id="start">Start</div>
 		</div>
 	</div>
 	
@@ -42,9 +42,14 @@
 			socket.emit('readyToStart', '');
 		});
 		
-		$('#current-player-card').click(function () {
+		$('#current-player-card').on("click", "polygon", function(e){
+			e.preventDefault();
 			socket.emit('selectPict', '');
+			/*
+			   this.attributes.name.value
+			*/
 		});
+		
 		$(document).ready(function(){
 			$.ajax({
 				url: "/players",

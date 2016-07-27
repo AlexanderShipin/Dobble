@@ -11,7 +11,18 @@ body {
 	z-index: 1;
 }
 
-.start-panel {
+#start {
+	width: 100px;
+    height: 40px;
+    text-align: center;
+    margin: 0px auto;
+    line-height: 40px;
+	border: 5px solid #9966cc;
+	background-color: #f4cb02;
+	border-radius: 15px;
+}
+
+.join-panel {
 	width: 268px;
 	height: 125px;
     position: absolute;
@@ -26,17 +37,17 @@ body {
 	border-radius: 10px;
 }
 
-.start-panel-line {
+.join-panel-line {
 	text-align: center;
 	margin-bottom: 16px;
 }
 
-.start-panel-line input {
+.join-panel-line input {
 	font-size: 16pt;
 	width: 263px;
 }
 
-.start-panel-line #ok-button {
+.join-panel-line #ok-button {
 	font-size: 16pt;
 	width: 267px;
 	padding: 3px 0;
@@ -46,13 +57,12 @@ body {
 
 #playground {
 	width: 980px;
-	height: 679px;	
-    position: absolute;
+	height: 679px;
     top:0;
     bottom: 0;
     left: 0;
     right: 0;
-	margin: auto;
+	margin: 10px auto;
 }
 
 #players {
@@ -78,11 +88,19 @@ body {
 	padding: 4px 0 4px 12px;
 }
 
-#current-common-card  img {
+#current-common-card,
+#current-player-card  {
 	width: 460px;
 	height: 658px;
 	border: 10px solid #f4cb02;
 	border-radius: 40px;
+	overflow: hidden;
+}
+
+#current-common-card  img,
+#current-player-card  img {
+	width: 100%;
+	height: auto;
 }
 
 #current-common-card {
@@ -91,11 +109,4 @@ body {
 
 #current-player-card {
 	float: right;
-}
-
-#current-player-card img {
-	width: 460px;
-	height: 658px;
-	border: 10px solid #f4cb02;
-	border-radius: 40px;
 }

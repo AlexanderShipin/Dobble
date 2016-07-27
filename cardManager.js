@@ -7,7 +7,7 @@ function getRandromCard(indexes){
 };
 
 function prepareCards(players){
-	var n = 3;
+	var n = 2;
 	var indexesTmp = [];
 	for(var i = 0; i < n; i++){
 		indexesTmp[i] = i;
@@ -32,17 +32,19 @@ function prepareCards(players){
 function getCardMarkup(cardId){
 	var cardMarkupConfig = cardsConfig;
 	var card = cardMarkupConfig.find(function(c){ return c.cardId == cardId});
+	
 	if(!card)
 		return '<img src="img/back.jpg"/>';
 	
-	var cardMarkup = '<img src="img/' + card.cardId + '.jpg" usemap="#card-map">' +
-		'<map name="card-map">';
+	var cardMarkup = '<svg version="1.1" xmlns:svg="http://www.w3.org/2000/svg" viewBox="0 0 742 1061" preserveAspectRatio="xMinYMin meet">' +
+				'<image width="742" height="1061" xlink:href="img/' + card.cardId + '.jpg" role="image" title="pic"></image>' +
+				'<g id="pics">';
 		   
-	for (var pic in card.cardPics) {
-	  cardMarkup += '<area shape="poly" coords="' + card.cardPics[pic] + '" href="">';
+	for (var pic in card.cardPics) {	
+		cardMarkup += '<polygon name="' + pic + '" opacity="0" points="' + card.cardPics[pic] + '"  onclick="alert(fdsghs)" />';
 	}
-	
-	cardMarkup += '</map>';
+	cardMarkup += '</g>' +
+		'</svg>';
 	return cardMarkup;
 }
 
