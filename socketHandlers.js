@@ -29,25 +29,28 @@ module.exports = function (io) {
 			console.log('user ' + socket.id + ' disconnected');
 		});
 
-		socket.on('selectPict', function () {
-			if(!cards)//temporary fix for last card suit click  || cards.currentPlayerCard == -1
+		socket.on('selectPict', function (selectedPicName) {
+			if(!cards)//temporary fix for last card suit click  || cards.currentPlayerCardId == -1
 				return;
 				
-			var playerCard = cards.currentPlayerCard;
+			var commonCardConfig = cardMng.getCardConfigById(cards.commonCard);
+			if(!commonCardConfig.cardPics[selectedPicName])
+				return;
 			
 			if(cards.playerHands[getCssValidSocketId(socket.id)].length > 0)
-				cards.currentPlayerCard = cards.playerHands[getCssValidSocketId(socket.id)].splice(0, 1)[0];//todo: empty card when done
+				cards.currentPlayerCardId = cards.playerHands[getCssValidSocketId(socket.id)].splice(0, 1)[0];//todo: empty card when done
 			else
-				cards.currentPlayerCard = -1;
+				cards.currentPlayerCardId = -1;				
 				
-			io.emit('changeCards', playerCard, cardMng.getCardMarkup(cards.currentPlayerCard));//todo: empty card when done
+			var playerCard = cards.currentPlayerCardId;
+			io.emit('changeCards', cardMng.getCommonCardMarkup(playerCard), cardMng.getPlayerCardMarkup(cards.currentPlayerCardId));//todo: empty card when done
 		});
 
 		socket.on('readyToStart', function () {
 			cards = cardMng.prepareCards(module.players);
 			
-			cards.currentPlayerCard = cards.playerHands[getCssValidSocketId(socket.id)].splice(0, 1)[0];
-			io.emit('changeCards', cards.firstCard, cardMng.getCardMarkup(cards.currentPlayerCard));
+			cards.currentPlayerCardId = cards.playerHands[getCssValidSocketId(socket.id)].splice(0, 1)[0];
+			io.emit('changeCards', cardMng.getCommonCardMarkup(cards.commonCard), cardMng.getPlayerCardMarkup(cards.currentPlayerCardId));
 			console.log('readyToStart');
 		});
 	};

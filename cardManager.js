@@ -1,6 +1,10 @@
 var fs = require('fs');
 var cardsConfig = JSON.parse(fs.readFileSync('cardsConfig.json', 'utf8'));
 
+function getCardConfigById(cardId){
+	return cardsConfig.find(function(c){ return c.cardId == cardId});	
+}
+
 function getRandromCard(indexes){
 	var randomCard = Math.floor(Math.random() * indexes.length);
 	return indexes.splice(randomCard, 1)[0];
@@ -14,7 +18,7 @@ function prepareCards(players){
 	}
 	
 	var result = {};
-	result.firstCard = getRandromCard(indexesTmp);
+	result.commonCard = getRandromCard(indexesTmp);
 	result.playerHands = {};
 	
 	var cardsForPlayers = indexesTmp.length;
@@ -29,9 +33,14 @@ function prepareCards(players){
 	return result;
 };
 
-function getCardMarkup(cardId){
-	var cardMarkupConfig = cardsConfig;
-	var card = cardMarkupConfig.find(function(c){ return c.cardId == cardId});
+function getCommonCardMarkup(cardId){
+	if(cardId < 0)
+		return '<img src="img/back.jpg">';
+	return '<img src="img/' + cardId + '.jpg">';
+}
+
+function getPlayerCardMarkup(cardId){
+	var card = cardsConfig.find(function(c){ return c.cardId == cardId});
 	
 	if(!card)
 		return '<img src="img/back.jpg"/>';
@@ -41,12 +50,14 @@ function getCardMarkup(cardId){
 				'<g id="pics">';
 		   
 	for (var pic in card.cardPics) {	
-		cardMarkup += '<polygon name="' + pic + '" opacity="0" points="' + card.cardPics[pic] + '"  onclick="alert(fdsghs)" />';
+		cardMarkup += '<polygon name="' + pic + '" opacity="0" points="' + card.cardPics[pic] + '"  onclick="" />';
 	}
 	cardMarkup += '</g>' +
 		'</svg>';
 	return cardMarkup;
 }
 
+exports.getCardConfigById = getCardConfigById;
 exports.prepareCards = prepareCards;
-exports.getCardMarkup = getCardMarkup;
+exports.getCommonCardMarkup = getCommonCardMarkup;
+exports.getPlayerCardMarkup = getPlayerCardMarkup;

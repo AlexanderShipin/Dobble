@@ -44,10 +44,7 @@
 		
 		$('#current-player-card').on("click", "polygon", function(e){
 			e.preventDefault();
-			socket.emit('selectPict', '');
-			/*
-			   this.attributes.name.value
-			*/
+			socket.emit('selectPict', this.attributes.name.value);
 		});
 		
 		$(document).ready(function(){
@@ -81,8 +78,8 @@
 		});
 		
 		socket.on('changeCards', function (commonCard, playerCardMarkup) {
-			$('#current-common-card img').attr("src", "img/" + commonCard + ".jpg");//todo: pics to background
-			$('#current-player-card').empty().append(playerCardMarkup);//attr("src", "img/" + playerCard + ".jpg");
+			$('#current-common-card').empty().append(commonCard)//todo: pics to background
+			$('#current-player-card').empty().append(playerCardMarkup);
 		});
 	</script>
   </body>
