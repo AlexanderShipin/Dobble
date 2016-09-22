@@ -8,6 +8,12 @@ module.exports = function (io) {
 		return socketId.substring(2);
 	}
 	
+	function getUniqueRoomName(adminSocketId) {
+		//possible collision
+		var lowerCaseSocketId = adminSocketId.toLowerCase();
+		return lowerCaseSocketId.substring(0, 5);
+	}
+	
 	function getRoomPlayers(roomName) {
 		return module.rooms.filter(r => r.name == roomName)[0].players;
 	}
@@ -24,7 +30,7 @@ module.exports = function (io) {
 			}
 			var room = module.rooms.filter(r => r.name == roomName);
 			if(roomName === '' || room.length == 0) {
-				roomName = getCssValidSocketId(socket.id);
+				roomName = getUniqueRoomName(getCssValidSocketId(socket.id));
 				var room = {name: roomName, players: []};
 				module.rooms.push(room);
 			}			
@@ -32,7 +38,7 @@ module.exports = function (io) {
 			socket.join(roomName);
 			
 			getRoomPlayers(socket.roomName).push(currentPlayer);
-			io.to(socket.roomName).emit('roomPlayers', JSON.stringify(getRoomPlayers(socket.roomName)));
+			io.to(socket.roomName).emit('roomPlayers', JSON.stringify(getRoomPlayers(socket.roomName)), socket.roomName);
 			console.log('user ' + socket.id + ' connected');
 		});
 
@@ -75,7 +81,7 @@ module.exports = function (io) {
 			socket.emit('changePlayerCard', cardMng.getPlayerCardMarkup(newCurrentPlayerCardId));
 		});
 
-		socket.on('readyToStart', function () {
+		socket.on('start', function () {
 			var players = getRoomPlayers(socket.roomName);
 			var room = module.rooms.filter(r => r.name == socket.roomName)[0];
 			room.cards = cardMng.prepareCards(players);
@@ -85,7 +91,7 @@ module.exports = function (io) {
 				io.to("/#" + players[i].id).emit('changePlayerCard', cardMng.getPlayerCardMarkup(currentPlayerCardId));
 			}
 			io.to(socket.roomName).emit('changeCommonCard', cardMng.getCommonCardMarkup(room.cards.commonCard));
-			console.log('readyToStart');
+			console.log('start');
 		});
 	};
 	

@@ -3,28 +3,32 @@ body {
 	font-family: sans-serif;
 }
 
+.body-wrapper {
+	height: 100%;
+}
+
 .overlay {
 	background: rgba(0, 0, 0, .6);
 	width: 100%;
 	height: 100%;
 	position: fixed;
 	z-index: 1;
+	top: 0;
 }
 
 #start {
 	width: 100px;
     height: 40px;
     text-align: center;
-    margin: 0px auto;
+    margin: 0 auto 5px;
     line-height: 40px;
 	border: 5px solid #9966cc;
 	background-color: #f4cb02;
 	border-radius: 15px;
+	font-weight: bold;
 }
 
-.join-panel {
-	width: 268px;
-	height: 125px;
+.panel {
     position: absolute;
     top:0;
     bottom: 0;
@@ -35,6 +39,16 @@ body {
 	padding: 16px;
 	border: 5px solid #9966cc;
 	border-radius: 10px;
+}
+
+.join-panel {
+	width: 268px;
+	height: 125px;
+}
+
+.players-panel {
+	width: 268px;
+	height: 343px;
 }
 
 .join-panel-line {
@@ -55,6 +69,30 @@ body {
 	display: block;
 }
 
+.game-code-line {
+	padding: 4px 0 0 12px;
+	margin: 0 0 5px 0;
+}
+
+.players-line {
+	margin: 0 0 5px 0;
+}
+
+.player-list-title {
+	background-color: #9966cc;
+	font-weight: bold;
+	text-align: center;
+	padding: 7px;
+	border-radius: 5px;
+}
+
+.player {
+	padding: 4px 0 4px 12px;
+	margin-right: 12px;
+	text-overflow: clip;
+	border-bottom: solid #9966cc 2px;
+}
+
 #playground {
 	width: 980px;
 	height: 679px;
@@ -63,29 +101,6 @@ body {
     left: 0;
     right: 0;
 	margin: 10px auto;
-}
-
-#players {
-	position: fixed;
-	right: 0;
-	width: 20%;
-	height: 100%;
-	border-left: 1px #000 solid;
-}
-
-.player-list-title {
-	background-color: #9966cc;
-	font-size: 14pt;
-	text-align: center;
-	padding: 7px;
-}
-
-#player-list div:nth-child(even) {
-	background-color: #ccc;
-}
-
-.player {
-	padding: 4px 0 4px 12px;
 }
 
 #current-common-card,

@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
   <head>
-    <title>Dobble - Start the game</title>
+    <title>Dobble</title>
     <link type="text/css" rel="stylesheet" media="screen" href="styles.css">
   </head>
   <body>
 	<div class="body-wrapper">
 		<div class="overlay">
-			<div class="join-panel">
+			<div class="join-panel panel">
 				<div class="join-panel-line">
 					<input id="player-name" type="text" name="player-name" placeholder="Name">
 				</div>
@@ -18,12 +18,16 @@
 					<span id="ok-button">OK</span>
 				</div>
 			</div>
+			
+			<div class="players-panel panel" style="display:none;">
+				<div class="game-code-line"><span>Game code:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span  id="game-code"></span></div>
+				<div id="start">Start</div>
+				<div class="players-line">
+					<div class="player-list-title">Players</div>
+					<div id="player-list"></div>
+				</div>
+			</div>
 		</div>
-		<div id="players">
-			<div class="player-list-title">Players</div>
-			<div id="player-list"></div>
-		</div>
-		<div id="start">Start</div>
 		<div id="playground">
 			<div id="current-common-card">
 				<img src="img/back.jpg"/>
@@ -39,7 +43,8 @@
 	<script>
 		var socket = io();
 		$('#start').click(function () {
-			socket.emit('readyToStart', '');
+			$(".overlay").hide();
+			socket.emit('start', '');
 		});
 		
 		$('#current-player-card').on("click", "polygon", function(e){
@@ -49,19 +54,22 @@
 		
 		$("#ok-button").click(function(){
 			socket.emit('newPlayer', $("#player-name").val(), $("#game-to-join").val());
-			$(".overlay").hide();
+			$(".join-panel").hide();
+			$(".players-panel").show();
 		});
 		
 		function displayPlayer(player){
 			$('#player-list').append($('<div class="player" id="' + player.id + '">').text(player.name));
 		};
 		
-		socket.on('roomPlayers', function (players) {
+		socket.on('roomPlayers', function (players, roomName) {
 			var players = $.parseJSON(players);
 			$('#player-list').empty();
 			$.each(players, function(index, player) {
 				displayPlayer(player);
 			});
+			
+			$('#game-code').empty().append(roomName);
 		});
 		
 		socket.on('playerDisconnected', function (playerId) {
@@ -69,6 +77,7 @@
 		});
 		
 		socket.on('changeCommonCard', function (commonCard) {
+			$(".overlay").hide();
 			$('#current-common-card').empty().append(commonCard);//todo: pics to background
 		});
 		
