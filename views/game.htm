@@ -47,30 +47,21 @@
 			socket.emit('selectPict', this.attributes.name.value);
 		});
 		
-		$(document).ready(function(){
-			$.ajax({
-				url: "/players",
-				success: function(playersJson){
-					var players = $.parseJSON(playersJson);
-					$.each(players, function(index, player) {
-						playerFormatter(player);
-					});
-				},
-				error: function(){}
-			});
-		});
-		
 		$("#ok-button").click(function(){
-			socket.emit('newPlayer', $("#player-name").val());
+			socket.emit('newPlayer', $("#player-name").val(), $("#game-to-join").val());
 			$(".overlay").hide();
 		});
 		
-		function playerFormatter(player){
+		function displayPlayer(player){
 			$('#player-list').append($('<div class="player" id="' + player.id + '">').text(player.name));
 		};
 		
-		socket.on('playerConnected', function (player) {
-			playerFormatter(player);
+		socket.on('roomPlayers', function (players) {
+			var players = $.parseJSON(players);
+			$('#player-list').empty();
+			$.each(players, function(index, player) {
+				displayPlayer(player);
+			});
 		});
 		
 		socket.on('playerDisconnected', function (playerId) {

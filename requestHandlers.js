@@ -9,9 +9,5 @@ module.exports = function (io, config) {
 		res.sendFile(path.join(__dirname, config.viewsFolder, 'game.htm'));
 	};
 	
-	module.players = function (req, res) {
-		res.send(JSON.stringify(socketHandlers.players));
-	};
-	
 	return module;
 };

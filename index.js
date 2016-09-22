@@ -16,7 +16,6 @@ var requestHandlers = require('./requestHandlers')(io, config);
 app.use(express.static(__dirname + config.viewsFolder));
 
 router.get('/', requestHandlers.index);
-router.get('/players', requestHandlers.players);
 app.use('', router);
 
 server.listen(9000, function () {

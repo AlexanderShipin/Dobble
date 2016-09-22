@@ -40,14 +40,14 @@
 {
 	"cardId": 3,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
+		"bomb": "",
 		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"clown": "",
+		"exclamation": "",
+		"ghost": "",
+		"carrot": "",
+		"dragon": "",
+		"blot": ""
 	}
 },
 {
