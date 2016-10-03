@@ -53,66 +53,66 @@
 {
 	"cardId": 4,
 	"cardPics": {
-		"igloo": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"anchor": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"drop": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"yinyang": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"question": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"pencil": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"cat": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"eye": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}}
+		"exclamation": "",
+		"pencil": "",
+		"clover": "",
+		"ice": "",
+		"turtle": "",
+		"tree": "",
+		"target": "",
+		"cheese": ""
 	}
 },
 {
 	"cardId": 5,
 	"cardPics": {
-		"igloo": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"anchor": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"drop": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"yinyang": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"question": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"pencil": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"cat": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"eye": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}}
+		"target": "",
+		"snowman": "",
+		"spider": "",
+		"clown": "",
+		"lightning": "",
+		"anchor": "",
+		"stop": "",
+		"glasses": ""
 	}
 },
 {
 	"cardId": 6,
 	"cardPics": {
-		"igloo": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"anchor": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"drop": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"yinyang": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"question": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"pencil": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"cat": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"eye": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}}
+		"dragon": "",
+		"dolphin": "",
+		"eye": "",
+		"maple": "",
+		"target": "",
+		"hart": "",
+		"dobble": "",
+		"key": ""
 	}
 },
 {
 	"cardId": 7,
 	"cardPics": {
-		"igloo": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"anchor": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"drop": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"yinyang": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"question": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"pencil": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"cat": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"eye": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}}
+		"exclamation": "",
+		"bonfire": "",
+		"yinyang": "",
+		"bird": "",
+		"man": "",
+		"hart": "",
+		"glasses": "",
+		"net": ""
 	}
 },
 {
 	"cardId": 8,
 	"cardPics": {
-		"igloo": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"anchor": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"drop": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"yinyang": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"question": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"pencil": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"cat": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}},
-		"eye": {"topLeft": {"x": 1, "y": 1}, "bottomRight": {"x": 100, "y": 100}}
+		"zebra": "",
+		"cat": "",
+		"exclamation": "",
+		"candle": "",
+		"cactus": "",
+		"stop": "",
+		"knight": "",
+		"dolphin": ""
 	}
 },
 {
