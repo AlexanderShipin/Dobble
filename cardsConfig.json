@@ -53,27 +53,27 @@
 {
 	"cardId": 4,
 	"cardPics": {
-		"exclamation": "",
-		"pencil": "",
-		"clover": "",
-		"ice": "",
-		"turtle": "",
-		"tree": "",
-		"target": "",
-		"cheese": ""
+		"exclamation": "45,117 258,13 323,137 90,252 39,224 24,158",
+		"pencil": "493,16 662,104 717,171 630,155 467,64",
+		"clover": "588,167 623,196 622,360 536,485 480,488 342,398 340,330 421,206",
+		"ice": "119,526 79,448 134,300 200,276 276,385 239,488",
+		"turtle": "381,746 457,546 561,485 642,539 569,763 463,803",
+		"tree": "55,837 12,756 187,560 359,634 374,752 328,853",
+		"target": "290,915 413,861 469,994 343,1041",
+		"cheese": "520,995 519,832 643,772 714,954 598,1030"
 	}
 },
 {
 	"cardId": 5,
 	"cardPics": {
-		"target": "",
-		"snowman": "",
-		"spider": "",
-		"clown": "",
-		"lightning": "",
-		"anchor": "",
-		"stop": "",
-		"glasses": ""
+		"target": "26,84 190,15 232,164 253,173 241,189 157,209 88,249",
+		"snowman": "607,236 518,202 479,112 519,48 610,68",
+		"spider": "310,421 165,369 110,262 164,210 251,191 258,173 234,159 310,112 400,201 424,326",
+		"clown": "381,576 453,259 667,288 729,392 717,551 502,586",
+		"lightning": "64,435 193,565 213,502 313,507 172,427 164,478",
+		"anchor": "413,625 318,882 141,818 124,638 368,576",
+		"stop": "519,692 623,717 685,829 632,957 491,997 377,887 400,739",
+		"glasses": "33,910 212,1008 233,929 94,861"
 	}
 },
 {
@@ -248,481 +248,468 @@
 {
 	"cardId": 19,
 	"cardPics": {
-		"igloo": "-----",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"daisy": "",
+		"igloo": "",
+		"skull": "",
+		"sun": "",
+		"zebra": "",
+		"target": "",
+		"net": "",
+		"ghost": ""
 	}
 },
 {
 	"cardId": 20,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
+		"zebra": "",
+		"clown": "",
 		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"cheese": "",
+		"bulb": "",
+		"key": "",
+		"man": "",
+		"apple": ""
 	}
 },
 {
 	"cardId": 21,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
+		"bomb": "",
+		"padlock": "",
 		"cat": "",
-		"eye": ""
+		"snowman": "",
+		"dobble": "",
+		"net": "",
+		"apple": "",
+		"tree": ""
 	}
 },
 {
 	"cardId": 22,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"lips": "",
+		"apple": "",
+		"ice": "",
+		"blot": "",
+		"eye": "",
+		"sun": "",
+		"knight": "",
+		"glasses": ""
 	}
 },
 {
 	"cardId": 23,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
 		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"cheese": "",
+		"hart": "",
+		"snowflake": "",
+		"stop": "",
+		"sun": "",
+		"padlock": "",
+		"ladybug": ""
 	}
 },
 {
 	"cardId": 24,
 	"cardPics": {
-		"igloo": "",
+		"clef": "",
+		"daisy": "",
+		"exclamation": "",
+		"car": "",
 		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"padlock": "",
+		"lips": "",
+		"key": ""
 	}
 },
 {
 	"cardId": 25,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"clock": "",
+		"bird": "",
+		"snowman": "",
+		"dragon": "",
+		"zebra": "",
+		"snowflake": "",
+		"lips": "",
+		"pencil": ""
 	}
 },
 {
 	"cardId": 26,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"cactus": "",
+		"clef": "",
+		"eye": "",
+		"net": "",
+		"snowflake": "",
+		"turtle": "",
+		"bottle": "",
+		"clown": ""
 	}
 },
 {
 	"cardId": 27,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
+		"apple": "",
+		"clock": "",
+		"dog": "",
+		"candle": "",
+		"target": "",
 		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"bonfire": "",
+		"clef": ""
 	}
 },
 {
 	"cardId": 28,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
 		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"exclamation": "",
+		"sun": "",
+		"dobble": "",
+		"clock": "",
+		"dinosaur": "",
+		"bottle": "",
+		"lightning": ""
 	}
 },
 {
 	"cardId": 29,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"glasses": "",
+		"maple": "",
+		"padlock": "",
+		"bulb": "",
+		"ghost": "",
+		"candle": "",
+		"bottle": "",
+		"pencil": ""
 	}
 },
 {
 	"cardId": 30,
 	"cardPics": {
+		"hammer": "",
+		"tree": "",
+		"lips": "",
+		"hart": "",
+		"candle": "",
+		"dinosaur": "",
 		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"clown": ""
 	}
 },
 {
 	"cardId": 31,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"knight": "",
+		"target": "",
+		"car": "",
+		"bulb": "",
+		"snowflake": "",
+		"bomb": "",
+		"dinosaur": "",
+		"yinyang": ""
 	}
 },
 {
 	"cardId": 32,
 	"cardPics": {
+		"clef": "",
+		"bulb": "",
 		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"dobble": "",
+		"ice": "",
+		"carrot": "",
+		"stop": "",
+		"bird": ""
 	}
 },
 {
 	"cardId": 33,
 	"cardPics": {
+		"cactus": "",
+		"glasses": "",
+		"key": "",
+		"bomb": "",
+		"clock": "",
+		"ladybug": "",
 		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"clover": ""
 	}
 },
 {
 	"cardId": 34,
 	"cardPics": {
-		"igloo": "",
+		"ice": "",
+		"zebra": "",
 		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"bomb": "",
+		"moon": "",
+		"dog": "",
+		"hart": "",
+		"bottle": ""
 	}
 },
 {
 	"cardId": 35,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
+		"spider": "",
+		"car": "",
 		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"net": "",
+		"candle": "",
+		"ice": "",
+		"dragon": "",
+		"ladybug": ""
 	}
 },
 {
 	"cardId": 36,
 	"cardPics": {
-		"igloo": "",
+		"turtle": "",
 		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"dolphin": "",
+		"ladybug": "",
+		"dinosaur": "",
+		"apple": "",
+		"ghost": "",
+		"bird": ""
 	}
 },
 {
 	"cardId": 37,
 	"cardPics": {
-		"igloo": "",
+		"dragon": "",
+		"tree": "",
+		"sun": "",
+		"cactus": "",
 		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"scissors": "",
+		"bulb": "",
+		"bonfire": ""
 	}
 },
 {
 	"cardId": 38,
 	"cardPics": {
+		"dragon": "",
+		"turtle": "",
 		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"knight": "",
+		"lightning": "",
+		"dog": "",
+		"man": "",
+		"padlock": ""
 	}
 },
 {
 	"cardId": 39,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
+		"bomb": "",
+		"turtle": "",
+		"stop": "",
+		"bonfire": "",
+		"skull": "",
+		"maple": "",
 		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"lips": ""
 	}
 },
 {
 	"cardId": 40,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
+		"snowflake": "",
+		"ice": "",
+		"key": "",
+		"hummer": "",
+		"lightning": "",
 		"cat": "",
-		"eye": ""
+		"bonfire": "",
+		"ghost": ""
 	}
 },
 {
 	"cardId": 41,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
+		"ladybug": "",
+		"tree": "",
+		"zebra": "",
+		"lightning": "",
+		"blot": "",
 		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"maple": "",
+		"clef": ""
 	}
 },
 {
 	"cardId": 42,
 	"cardPics": {
-		"igloo": "",
+		"net": "",
+		"clock": "",
 		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"maple": "",
+		"hummer": "",
+		"carrot": "",
+		"cheese": "",
+		"knight": ""
 	}
 },
 {
 	"cardId": 43,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
+		"hummer": "",
+		"dragon": "",
+		"clover": "",
 		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"daisy": "",
+		"stop": "",
+		"apple": "",
+		"bottle": ""
 	}
 },
 {
 	"cardId": 44,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
+		"sun": "",
+		"candle": "",
+		"turtle": "",
+		"moon": "",
 		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"carrot": "",
+		"key": "",
+		"snowman": ""
 	}
 },
 {
 	"cardId": 45,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"spider": "",
+		"clover": "",
+		"carrot": "",
+		"bonfire": "",
+		"eye": "",
+		"zebra": "",
+		"padlock": "",
+		"dinosaur": ""
 	}
 },
 {
 	"cardId": 46,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
+		"bulb": "",
+		"moon": "",
+		"dolphin": "",
+		"lightning": "",
+		"clover": "",
 		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"lips": "",
+		"net": ""
 	}
 },
 {
 	"cardId": 47,
 	"cardPics": {
+		"scissors": "",
 		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"spider": "",
+		"maple": "",
+		"exclamation": "",
+		"apple": "",
+		"snowflake": "",
+		"moon": ""
 	}
 },
 {
 	"cardId": 48,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
+		"clef": "",
+		"bomb": "",
 		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"hummer": "",
+		"spider": "",
+		"man": "",
+		"dolphin": "",
+		"sun": ""
 	}
 },
 {
 	"cardId": 49,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
 		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"clock": "",
+		"ice": "",
+		"dolphin": "",
+		"skull": "",
+		"scissors": "",
+		"padlock": "",
+		"clown": ""
 	}
 },
 {
 	"cardId": 50,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
+		"bottle": "",
 		"cat": "",
-		"eye": ""
+		"man": "",
+		"scissors": "",
+		"target": "",
+		"carrot": "",
+		"ladybug": "",
+		"lips": ""
 	}
 },
 {
 	"cardId": 51,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"man": "",
+		"candle": "",
+		"clover": "",
+		"skull": "",
+		"snowflake": "",
+		"blot": "",
+		"dobble": "",
+		"anchor": ""
 	}
 },
 {
 	"cardId": 52,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
+		"clef": "",
+		"dinosaurs": "",
+		"cheese": "",
 		"cat": "",
-		"eye": ""
+		"dragon": "",
+		"moon": "",
+		"skull": "",
+		"glasses": ""
 	}
 },
 {
 	"cardId": 53,
 	"cardPics": {
 		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"bonfire": "",
+		"dolphin": "",
+		"snowman": "",
+		"cheese": "",
+		"blot": "",
+		"bottle": "",
+		"car": ""
 	}
 },
 {
 	"cardId": 54,
 	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
+		"bulb": "",
+		"turtle": "",
+		"daisy": "",
+		"clock": "",
+		"spider": "",
+		"blot": "",
 		"cat": "",
-		"eye": ""
-	}
-},
-{
-	"cardId": 55,
-	"cardPics": {
-		"igloo": "",
-		"anchor": "",
-		"drop": "",
-		"yinyang": "",
-		"question": "",
-		"pencil": "",
-		"cat": "",
-		"eye": ""
+		"hart": ""
 	}
 }]
