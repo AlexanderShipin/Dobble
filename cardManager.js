@@ -11,7 +11,7 @@ function getRandromCard(indexes){
 };
 
 function prepareCards(players){
-	var n = 3;
+	var n = 32;
 	var indexesTmp = [];
 	for(var i = 0; i < n; i++){
 		indexesTmp[i] = i;

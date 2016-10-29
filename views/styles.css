@@ -94,8 +94,7 @@ body {
 }
 
 #playground {
-	width: 980px;
-	height: 679px;
+	width: 766px;
     top:0;
     bottom: 0;
     left: 0;
@@ -105,11 +104,12 @@ body {
 
 #current-common-card,
 #current-player-card  {
-	width: 460px;
-	height: 658px;
+	width: 343px;
+	height: 490px;
 	border: 10px solid #f4cb02;
 	border-radius: 40px;
 	overflow: hidden;
+	margin: 0 20px 0 0;
 }
 
 #current-common-card  img,
