@@ -11,7 +11,7 @@ function getRandromCard(indexes){
 };
 
 function prepareCards(players){
-	var n = 32;
+	var n = 33;
 	var indexesTmp = [];
 	for(var i = 0; i < n; i++){
 		indexesTmp[i] = i;
@@ -22,7 +22,7 @@ function prepareCards(players){
 	result.playerHands = {};
 	
 	var cardsForPlayers = indexesTmp.length;
-	var cardsPerPlayer = cardsForPlayers / players.length;
+	var cardsPerPlayer = Math.floor(cardsForPlayers / players.length);
 	for(var i = 0; i < players.length; i++){
 		var deck = [];
 		for(var j = 0; j < cardsPerPlayer; j++){

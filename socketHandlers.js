@@ -72,10 +72,10 @@ module.exports = function (io) {
 			if(cards.playerHands[getCssValidSocketId(socket.id)].length > 0)
 				newCommonCard = cards.playerHands[getCssValidSocketId(socket.id)].splice(0, 1)[0];
 			else
-				newCommonCard = -1;				
+				newCommonCard = -1;
+			cards.commonCard = newCommonCard;
 			
 			var newCurrentPlayerCardId = cards.playerHands[getCssValidSocketId(socket.id)][0];
-			cards.commonCard = newCommonCard;
 			
 			io.to(socket.roomName).emit('changeCommonCard', cardMng.getCommonCardMarkup(newCommonCard));
 			socket.emit('changePlayerCard', cardMng.getPlayerCardMarkup(newCurrentPlayerCardId));
