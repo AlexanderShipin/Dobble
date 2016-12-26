@@ -27,13 +27,26 @@
 					<div id="player-list"></div>
 				</div>
 			</div>
+			
+			<div class="results-panel panel" style="display:none;">
+				<div class="players-line">
+					<div class="player-list-title">Results</div>
+					<div id="player-result-list"></div>
+				</div>
+			</div>
 		</div>
 		<div id="playground">
-			<div id="current-common-card">
-				<img src="img/back.jpg"/>
+			<div class="current-common-card-wrapper">
+				<div class="title">Common card</div>
+				<div id="current-common-card">
+					<img src="img/back.jpg"/>
+				</div>
 			</div>
-			<div id="current-player-card">
-				<img src="img/back.jpg"/>
+			<div class="current-player-card-wrapper">
+				<div class="title">Your card (click picture that is on Common card too)</div>
+				<div id="current-player-card">
+					<img src="img/back.jpg"/>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -76,14 +89,32 @@
 			$('#' + playerId).remove();
 		});
 		
-		socket.on('changeCommonCard', function (commonCard) {
+		socket.on('start', function (commonCard) {
 			$(".overlay").hide();
+		});
+		
+		socket.on('changeCommonCard', function (commonCard) {
 			$('#current-common-card').empty().append(commonCard);//todo: pics to background
 		});
 		
 		socket.on('changePlayerCard', function (playerCardMarkup) {
 			$('#current-player-card').empty().append(playerCardMarkup);//todo: pics to background
 		});
+		
+		socket.on('playerFinished', function (players) {
+			$(".overlay").show();
+			$(".results-panel").show();
+			$('#player-result-list').empty();		
+			$.each(players, function(index, player) {
+				displayFinishedPlayer(index, player);
+			});
+		});
+		
+		function displayFinishedPlayer(index, player){
+			$('#player-result-list').append($('<div class="player" id="' + player.id + '">')
+										.append($('<span class="player-name">').text(index + 1 + ". " + player.name))
+										.append($('<span class="player-time">').text(player.time)));
+		};
 	</script>
   </body>
 </html>

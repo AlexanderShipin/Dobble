@@ -51,6 +51,11 @@ body {
 	height: 343px;
 }
 
+.results-panel {
+	width: 268px;
+	height: 343px;
+}
+
 .join-panel-line {
 	text-align: center;
 	margin-bottom: 16px;
@@ -93,6 +98,16 @@ body {
 	border-bottom: solid #9966cc 2px;
 }
 
+.player-name {
+	display: block
+	float: left;
+}
+
+.player-time {
+	display: block;
+	float: right;
+}
+
 #playground {
 	width: 766px;
     top:0;
@@ -109,7 +124,6 @@ body {
 	border: 10px solid #f4cb02;
 	border-radius: 40px;
 	overflow: hidden;
-	margin: 0 20px 0 0;
 }
 
 #current-common-card  img,
@@ -118,10 +132,16 @@ body {
 	height: auto;
 }
 
-#current-common-card {
+.current-common-card-wrapper {
 	float: left;
+	margin: 0 20px 0 0;
 }
 
-#current-player-card {
+.current-player-card-wrapper {
 	float: right;
+	margin: 0 20px 0 0;
+}
+
+#playground .title {
+	font-size: 10pt;
 }
