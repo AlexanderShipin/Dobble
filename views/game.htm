@@ -15,23 +15,36 @@
 					<input id="game-to-join" type="text" name="game-to-join" placeholder="Game code to join">
 				</div>
 				<div class="join-panel-line">
-					<span id="ok-button">OK</span>
+					<div id="ok-button" class="button">OK</div>
 				</div>
 			</div>
 			
 			<div class="players-panel panel" style="display:none;">
-				<div class="game-code-line"><span>Game code:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span  id="game-code"></span></div>
-				<div id="start">Start</div>
-				<div class="players-line">
-					<div class="player-list-title">Players</div>
-					<div id="player-list"></div>
+				<div class="players-panel-line">
+					<div class="game-code"><span>Game code:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span  id="game-code"></span></div>
+				</div>
+				<div class="players-panel-line">
+					<div id="start-button" class="button">Start</div>	
+				</div>
+				<div class="players-panel-line">
+					<div class="players">
+						<div class="player-list-title">Players</div>
+						<div id="player-list"></div>
+					</div>
 				</div>
 			</div>
 			
 			<div class="results-panel panel" style="display:none;">
-				<div class="players-line">
-					<div class="player-list-title">Results</div>
-					<div id="player-result-list"></div>
+				<div class="results-panel-line">
+					<div class="players">
+						<div class="player-list-title">Results</div>
+						<div id="player-result-list"></div>
+					</div>
+				</div>
+				<div class="results-panel-line buttons">
+					<div class="play-again-title">Play again</div>
+					<div id="again-yes-button" class="button">Yes</div>
+					<div id="again-no-button" class="button">No</div>
 				</div>
 			</div>
 		</div>
@@ -55,7 +68,7 @@
 	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 	<script>
 		var socket = io();
-		$('#start').click(function () {
+		$('#start-button').click(function () {
 			$(".overlay").hide();
 			socket.emit('start', '');
 		});
@@ -69,6 +82,16 @@
 			socket.emit('newPlayer', $("#player-name").val(), $("#game-to-join").val());
 			$(".join-panel").hide();
 			$(".players-panel").show();
+		});
+				
+		$("#again-yes-button").click(function(){
+			socket.emit('again', true);
+			$('.results-panel-line.buttons').hide();
+		});
+				
+		$("#again-no-button").click(function(){
+			socket.emit('again', false);
+			$('.results-panel-line.buttons').hide();
 		});
 		
 		function displayPlayer(player){
@@ -103,15 +126,22 @@
 		
 		socket.on('playerFinished', function (players) {
 			$(".overlay").show();
-			$(".results-panel").show();
+			$(".results-panel").show();			
+			$('.results-panel-line.buttons').show();
 			$('#player-result-list').empty();		
 			$.each(players, function(index, player) {
 				displayFinishedPlayer(index, player);
 			});
 		});
 		
+		socket.on('againPlayer', function (player) {
+			var text = player.again ? "+" : "-";
+			var className = player.again ? "player-again-yes" : "player-again-no";
+			$('#finished_' + player.id).append($('<span class="' + className + '">').text(text));
+		});
+		
 		function displayFinishedPlayer(index, player){
-			$('#player-result-list').append($('<div class="player" id="' + player.id + '">')
+			$('#player-result-list').append($('<div class="player" id="finished_' + player.id + '">')
 										.append($('<span class="player-name">').text(index + 1 + ". " + player.name))
 										.append($('<span class="player-time">').text(player.time)));
 		};

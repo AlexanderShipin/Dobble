@@ -33,6 +33,30 @@ module.exports = function (io) {
 			io.to(socket.roomName).emit('roomPlayers', JSON.stringify(getRoom(socket.roomName).players), socket.roomName);
 			console.log('user ' + socket.id + ' connected');
 		});
+		
+		socket.on('again', function (playAgain){
+			var room = getRoom(socket.roomName);
+			if(!room.againPlayerList)
+				room.againPlayerList = [];
+				
+			var againPlayer = {id: socket.id, again: playAgain};
+			room.againPlayerList.push(againPlayer);			
+			io.to(socket.roomName).emit('againPlayer', againPlayer);
+			
+			if(room.againPlayerList.length == room.players.length) {
+				room.againPlayerList.forEach(ap => {
+					if(ap.again === false) {
+						var playerToDelete = room.players.find(p => p.id == ap.id);
+						room.players.splice(room.players.indexOf(playerToDelete), 1);
+						io.sockets.connected[playerToDelete.id].leave(socket.roomName);
+					}
+				});
+				room.againPlayerList = [];
+				
+				if(room.players.length > 0)
+					onStart();
+			}
+		});
 
 		socket.on('disconnect', function () {
 			io.emit('playerDisconnected', socket.id);
@@ -77,11 +101,15 @@ module.exports = function (io) {
 				var finishedPlayer = room.players.find(p => p.id == socket.id);
 				var time = process.hrtime(room.startTime);
 				room.finishedPlayers.push({id: socket.id, name: finishedPlayer.name, time: time[0] + Math.round(time[1]/1000000000 * 100) / 100 + "s" });
+				console.log(time[0] + " " + time[1]);
 				room.finishedPlayers.forEach(fp => io.to(fp.id).emit('playerFinished', room.finishedPlayers));
 			}		
 		});
 
-		socket.on('start', function () {
+		socket.on('start', function() {
+			onStart();
+		});
+		var onStart = function () {
 			var room = getRoom(socket.roomName);
 			var players = room.players;	
 			room.cards = cardMng.prepareCards(players);
@@ -95,7 +123,7 @@ module.exports = function (io) {
 			room.finishedPlayers = [];
 			room.startTime = process.hrtime();
 			console.log('start');
-		});
+		};
 	};
 	
 	return module;

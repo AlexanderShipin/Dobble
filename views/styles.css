@@ -16,16 +16,18 @@ body {
 	top: 0;
 }
 
-#start {
+.button {
 	width: 100px;
     height: 40px;
     text-align: center;
-    margin: 0 auto 5px;
+    margin: 0 auto;
     line-height: 40px;
 	border: 5px solid #9966cc;
 	background-color: #f4cb02;
 	border-radius: 15px;
 	font-weight: bold;
+	font-size: 16pt;
+	display: block;
 }
 
 .panel {
@@ -43,7 +45,7 @@ body {
 
 .join-panel {
 	width: 268px;
-	height: 125px;
+	height: 120px;
 }
 
 .players-panel {
@@ -56,9 +58,25 @@ body {
 	height: 343px;
 }
 
-.join-panel-line {
+.join-panel-line,
+.players-panel-line,
+.results-panel-line {
+	margin-bottom: 8px;
+}
+
+.play-again-title {
 	text-align: center;
-	margin-bottom: 16px;
+	margin: 0 0 8px 0;
+	padding: 8px 0 0 0;
+	font-weight: bold;
+}
+
+#again-yes-button {
+	float: left;
+}
+
+#again-no-button {
+	float: right;
 }
 
 .join-panel-line input {
@@ -66,20 +84,13 @@ body {
 	width: 263px;
 }
 
-.join-panel-line #ok-button {
-	font-size: 16pt;
-	width: 267px;
-	padding: 3px 0;
-	background-color: #f4cb02;
-	display: block;
-}
-
-.game-code-line {
+.game-code{
 	padding: 4px 0 0 12px;
-	margin: 0 0 5px 0;
 }
 
-.players-line {
+.players-panel .players,
+.results-panel .players
+{
 	margin: 0 0 5px 0;
 }
 
@@ -144,4 +155,20 @@ body {
 
 #playground .title {
 	font-size: 10pt;
+}
+
+.player-again-yes,
+.player-again-no {
+    float: right;
+	font-weight: bold;
+}
+
+.player-again-yes {
+	color: #9966cc;
+    margin-right: 10px;
+}
+
+.player-again-no {
+	color: #f4cb02;
+    margin-right: 14px;
 }
