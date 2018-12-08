@@ -84,8 +84,12 @@ body {
 	width: 263px;
 }
 
-.game-code{
+.game-code {
 	padding: 4px 0 0 12px;
+}
+
+.game-code-text {
+	margin-right: 25px;
 }
 
 .players-panel .players,
